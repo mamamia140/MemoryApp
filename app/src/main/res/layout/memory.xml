@@ -60,7 +60,7 @@
         android:layout_alignParentBottom="false"
         android:layout_marginStart="8dp"
         android:layout_marginTop="5dp"
-        android:text="Texas/Nevada"
+        android:text="Esenler/Istanbul"
         android:textColor="#4c4c4c" />
 
     <TextView

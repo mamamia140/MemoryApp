@@ -145,7 +145,6 @@ public class AddMemory extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        System.out.println("addmemory activityye girdi request:" + requestCode + ",result:" +resultCode);
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 2 && resultCode == RESULT_OK && null != data) {
             Uri selectedImageUri = data.getData();

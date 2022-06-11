@@ -11,6 +11,7 @@ import android.provider.MediaStore;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -73,7 +74,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        System.out.println("main activityye girdi request:" + requestCode + ",result:" + resultCode);
         if (requestCode == 1) {
             if (resultCode == 1) {
                 singleMemory temp = data.getParcelableExtra("MEMORY");
@@ -85,7 +85,6 @@ public class MainActivity extends AppCompatActivity {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-                System.out.println(selectedImageBitmap.getWidth());
                 int width = (selectedImageBitmap.getWidth())/5;
                 int height = (selectedImageBitmap.getHeight())/5;
                 DB.insertData(temp.title,temp.date,temp.message, Bitmap.createScaledBitmap(selectedImageBitmap,width,height,false));
